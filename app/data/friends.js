@@ -3,6 +3,7 @@
 // List of friends already in array
 // ===============================================================================
 
+
 var friends= [
     {
         name: "Louis",
