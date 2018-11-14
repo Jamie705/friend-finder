@@ -3,7 +3,7 @@
 // List of friends already in array
 // ===============================================================================
 
-var friendsData = [
+var friends= [
     {
         name: "Louis",
         photo: "https://www.learnjazzstandards.com/wp-content/uploads/2015/09/LouisArmstrong3.jpg",
@@ -83,8 +83,8 @@ var friendsData = [
             3,
             4,
         ]
-    },
+    }
 ];
 
 // Note how we export the array. This makes it accessible to other files using require.
-module.exports = friendsData;
+module.exports = friends;

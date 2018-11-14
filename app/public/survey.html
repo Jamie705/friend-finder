@@ -7,10 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
     <title>Friend Finder Survey</title>
 </head>
@@ -21,203 +20,215 @@
         <div class="jumbotron">
             <h1 class="display-4">Survey</h1>
             <hr class="my-4">
-            <p class="lead">Buddies</p>
+            <p class="lead">Music Match</p>
             <p class="lead">Answer these short questions and get your match.</p>
 
             <a class="btn btn-primary btn-lg" href="/home" role="button">Go Home</a>
 
         </div>
-        <!-- Form for basic data -->
-        <h3>Your Info:</h3>
-        <form id="surveyForm" >
-            <div class="form-row survey" id="formInfo">
+
+        <form id="surveyForm" class="align-items-left col-md-12">
+            <!-- Form for basic data -->
+            <h4>Your Info:</h4>
+            <div class="form-row" id="formInfo">
                 <div class="form-group">
                     <label for="inputName">Name (Required)</label>
                     <input type="text" class="form-control" id="inputName" placeholder="Name" required="">
                 </div>
-
+                <br>
                 <div class="form-group col-md-6">
                     <label for="photoLink">Link to Photo (Required)</label>
                     <input type="text" class="form-control" id="photoLink" required="">
                 </div>
             </div>
-
+            <hr>
+            <br>
+           
             <!-- Form for survey -->
-            <div class="form-row align-items-left container" id="surveyQuestions">
-                <h3>Fill out short survey to find your new friend.</h3>
-
-                <!-- Question 1-->
-                <div class="col-auto my-1">
-                    <h3><strong>Question 1</strong></h3>
-                    <h4>You like to relax as much as you can.</h4>
-                    <label class="mr-sm-2 sr-only" for="question1">Question 1</label>
-                    <select class="custom-select mr-sm-2 questions" id="question1">
-                        <option selected>Choose...</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                    <br>
+            <div class="form-row" id="surveyQuestions">
+                <div class="row col-md-10">
+                    <h4><strong>Fill out short survey to find your best match in music.</strong> </h4>
                     <hr>
                 </div>
-
-                <!-- Question 2 -->
-                <div class="col-auto my-1">
-                    <h3><strong>Question 2</strong></h3>
-                    <h4>You enjoy dancing.</h4>
-
-                    <label class="mr-sm-2 sr-only" for="question2">Question 2</label>
-                    <select class="custom-select mr-sm-2 questions" id="question2">
-                        <option selected>Choose...</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                    <br>
                     <hr>
-                </div>
 
-                <!-- Question 3 -->
-                <div class="col-auto my-1">
-                    <h3><strong>Question 3</strong></h3>
-                    <h4>You consider yourself different.</h4>
+                <div class="row col-md-10">
+                    <!-- Question 1-->
+                    <div class="col-auto my-1">
+                        <h4><strong>Question 1</strong></h4>
+                        <h6>You like to relax as much as you can.</h6>
+                        <label class="mr-sm-2 sr-only" for="question1">Question 1</label>
+                        <select class="custom-select mr-sm-2 questions" id="question1">
+                            <option selected>Choose...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
 
-                    <label class="mr-sm-2 sr-only" for="question3">Question 3</label>
-                    <select class="custom-select mr-sm-2 questions" id="question3">
-                        <option selected>Choose...</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                    <br>
-                    <hr>
-                </div>
+                    <!-- Question 2 -->
+                    <div class="col-auto my-1">
+                        <h4><strong>Question 2</strong></h4>
+                        <h6>You enjoy dancing.         </h6>
 
-                <!-- Question 4 -->
-                <div class="col-auto my-1">
-                    <h3><strong>Question 4</strong></h3>
-                    <h4>You like to stay up all night.</h4>
-
-                    <label class="mr-sm-2 sr-only" for="question4">Question 4</label>
-                    <select class="custom-select mr-sm-2 questions" id="question4">
-                        <option selected>Choose...</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
+                        <label class="mr-sm-2 sr-only" for="question2">Question 2</label>
+                        <select class="custom-select mr-sm-2 questions" id="question2">
+                            <option selected>Choose...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
                 </div>
                 <hr>
 
-                <!-- Question 5 -->
-                <div class="col-auto my-1">
-                    <h3><strong>Question 5</strong></h3>
-                    <h4>You like to rock out.</h4>
+                <div class="row col-md-10">
+                    <!-- Question 3 -->
+                    <div class="col-auto my-1">
+                        <h4><strong>Question 3</strong></h4>
+                        <h6>You consider yourself different.</h6>
 
-                    <label class="mr-sm-2 sr-only" for="question5">Question 5</label>
-                    <select class="custom-select mr-sm-2 questions" id="question5">
-                        <option selected>Choose...</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
+                        <label class="mr-sm-2 sr-only" for="question3">Question 3</label>
+                        <select class="custom-select mr-sm-2 questions" id="question3">
+                            <option selected>Choose...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+
+                    </div>
+                        
+                    <!-- Question 4 -->
+                    <div class="col-auto my-1">
+                        <h4><strong>Question 4</strong></h4>
+                        <h6>You like to stay up all night.</h6>
+
+                        <label class="mr-sm-2 sr-only" for="question4">Question 4</label>
+                        <select class="custom-select mr-sm-2 questions" id="question4">
+                            <option selected>Choose...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
                 </div>
                 <hr>
 
-                <!-- Question 6 -->
-                <div class="col-auto my-1">
-                    <h3><strong>Question 6</strong></h3>
-                    <h4>You like being in groups of people.</h4>
+                <div class="row col-md-10">
+                    <!-- Question 5 -->
+                    <div class="col-auto my-1">
+                        <h4><strong>Question 5</strong></h4>
+                        <h6>You like to rock out.      </h6>
 
-                    <label class="mr-sm-2 sr-only" for="question6">Question 6</label>
-                    <select class="custom-select mr-sm-2 questions" id="question6">
-                        <option selected>Choose...</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
+                        <label class="mr-sm-2 sr-only" for="question5">Question 5</label>
+                        <select class="custom-select mr-sm-2 questions" id="question5">
+                            <option selected>Choose...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="col-auto my-1">
+                        <h4><strong>Question 6</strong></h4>
+                        <h6>You like being in groups of people.</h6>
+
+                        <label class="mr-sm-2 sr-only" for="question6">Question 6</label>
+                        <select class="custom-select mr-sm-2 questions" id="question6">
+                            <option selected>Choose...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
                 </div>
                 <hr>
 
-                <!-- Question 7 -->
-                <div class="col-auto my-1">
-                    <h3><strong>Question 7</strong></h3>
-                    <h4>Your consider yourself a champion.</h4>
+                <div class="row col-md-10">
+                    <!-- Question 7 -->
+                    <div class="col-auto my-1">
+                        <h4><strong>Question 7</strong></h4>
+                        <h6>Your consider yourself a champion.</h6>
 
-                    <label class="mr-sm-2 sr-only" for="question7">Question 7</label>
-                    <select class="custom-select mr-sm-2 questions" id="question7">
-                        <option selected>Choose...</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
+                        <label class="mr-sm-2 sr-only" for="question7">Question 7</label>
+                        <select class="custom-select mr-sm-2 questions" id="question7">
+                            <option selected>Choose...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <!-- Question 8 -->
+                    <div class="col-auto my-1">
+                        <h4><strong>Question 8</strong></h4>
+                        <h6>You prefer bass over treble.</h6>
+
+                        <label class="mr-sm-2 sr-only" for="question8">Question 8</label>
+                        <select class="custom-select mr-sm-2 questions" id="question8">
+                            <option selected>Choose...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+                <hr>    
+
+                <div class="row col-md-10">
+                    <!-- Question 9 -->
+                    <div class="col-auto my-1">
+                        <h4><strong>Question 9</strong></h4>
+                        <h6>You prefer live music.     </h6>
+
+                        <label class="mr-sm-2 sr-only" for="question9">Question 9</label>
+                        <select class="custom-select mr-sm-2 questions" id="question9">
+                            <option selected>Choose...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <!-- Question 10 -->
+                    <div class="col-auto my-1">
+                        <h4><strong>Question 10</strong></h4>
+                        <h6>You like listening to loud music.</h6>
+
+                        <label class="mr-sm-2 sr-only" for="question10">Question 10</label>
+                        <select class="custom-select mr-sm-2 questions" id="question10">
+                            <option selected>Choose...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
                 </div>
                 <hr>
 
-                <!-- Question 8 -->
-                <div class="col-auto my-1">
-                    <h3><strong>Question 8</strong></h3>
-                    <h4>You prefer bass over treble.</h4>
-
-                    <label class="mr-sm-2 sr-only" for="question8">Question 8</label>
-                    <select class="custom-select mr-sm-2 questions" id="question8">
-                        <option selected>Choose...</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-                <hr>
-
-                <!-- Question 9 -->
-                <div class="col-auto my-1">
-                    <h3><strong>Question 9</strong></h3>
-                    <h4>You prefer live music.</h4>
-
-                    <label class="mr-sm-2 sr-only" for="question9">Question 9</label>
-                    <select class="custom-select mr-sm-2 questions" id="question9">
-                        <option selected>Choose...</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-                <hr>
-
-                <!-- Question 10 -->
-                <div class="col-auto my-1">
-                    <h3><strong>Question 10</strong></h3>
-                    <h4>You like listening to loud music.</h4>
-
-                    <label class="mr-sm-2 sr-only" for="question10">Question 10</label>
-                    <select class="custom-select mr-sm-2 questions" id="question10">
-                        <option selected>Choose...</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-
-                <div class="container">
+                <!-- Submit Button -->
+                <div class="row col-md-10">
                     <div class="col-auto my-1">
                         <button type="submit" class="btn btn-primary submit">Submit</button>
                     </div>
@@ -232,12 +243,12 @@
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
+                        <h4 class="modal-title"><strong>Best Match</strong></h4>
                         <button type="button" class="close" data-dismiss="modal">×</button>
-                        <h2 class="modal-title"><strong>Best Match</strong></h2>
                     </div>
                     <div class="modal-body">
-                        <h2 id="friend-name"></h2>
-                        <img id="friend-pix" width="200" alt="picture of matching friend">
+                        <h4 id="friend-name"></h4>
+                        <img id="friend-pix" width="250" alt="picture of matching friend">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -253,9 +264,22 @@
                 <p><a href="/api/friends">API Friends List</a> | <a href="#">GitHub Repo</a></p>
             </div>
         </footer>
+        
+        <!-- scripts -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous">
 
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+            crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+        
+        
         <script type="text/javascript">
-
             // Capture the form inputs
             $(".submit").on("click", function (event) {
                 event.preventDefault();
@@ -316,21 +340,16 @@
                             alert("Please fill out all fields before submitting!");
                         }
                         // Clear the form when submitting
-                        $("#surveyForm").val("");
-                    });    
-                       
+                        $(".questions").val("");
+                        $("#inputName").val("");
+                        $("#photoLink").val("");
+
+                    });     
                 }
             });    
-        
+
         </script>
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-            crossorigin="anonymous"></script>
+
 </body>
 
 </html>
