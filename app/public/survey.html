@@ -10,6 +10,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
 
     <title>Friend Finder Survey</title>
 </head>
@@ -19,44 +22,44 @@
         <!-- Jubmotron -->
         <div class="jumbotron">
             <h1 class="display-4">Survey</h1>
+            <p class="lead">Answer these short questions and get your match <i class="fas fa-headphones"></i></p>
             <hr class="my-4">
-            <p class="lead">Music Match</p>
-            <p class="lead">Answer these short questions and get your match.</p>
-
             <a class="btn btn-primary btn-lg" href="/home" role="button">Go Home</a>
-
         </div>
 
         <form id="surveyForm" class="align-items-left col-md-12">
             <!-- Form for basic data -->
             <h4>Your Info:</h4>
             <div class="form-row" id="formInfo">
-                <div class="form-group">
+                <div class="form-group col-md-6">
                     <label for="inputName">Name (Required)</label>
                     <input type="text" class="form-control" id="inputName" placeholder="Name" required="">
                 </div>
-                <br>
+
                 <div class="form-group col-md-6">
                     <label for="photoLink">Link to Photo (Required)</label>
-                    <input type="text" class="form-control" id="photoLink" required="">
+                    <input type="text" class="form-control" id="photoLink" placeholder="Link to photo" required="">
                 </div>
             </div>
             <hr>
             <br>
-           
+
             <!-- Form for survey -->
             <div class="form-row" id="surveyQuestions">
-                <div class="row col-md-10">
+                <div class="row col-md-12">
                     <h4><strong>Fill out short survey to find your best match in music.</strong> </h4>
-                    <hr>
                 </div>
-                    <hr>
 
-                <div class="row col-md-10">
+
+                <div class="row col-md-12">
+                    <br>
+                    <i class="fas fa-headphones"></i>
+                    <hr>
                     <!-- Question 1-->
-                    <div class="col-auto my-1">
-                        <h4><strong>Question 1</strong></h4>
-                        <h6>You like to relax as much as you can.</h6>
+                    <div class="col-md-6 my-1">
+                        <h3><strong>Question 1</strong></h3>
+                        <h4>Your down time consist of relaxing, with a glass of wine.</h4>
+
                         <label class="mr-sm-2 sr-only" for="question1">Question 1</label>
                         <select class="custom-select mr-sm-2 questions" id="question1">
                             <option selected>Choose...</option>
@@ -69,9 +72,9 @@
                     </div>
 
                     <!-- Question 2 -->
-                    <div class="col-auto my-1">
-                        <h4><strong>Question 2</strong></h4>
-                        <h6>You enjoy dancing.         </h6>
+                    <div class="col-md-6 my-1">
+                        <h3><strong>Question 2</strong></h3>
+                        <h4>Dancing is not just cardio, it's a serious art.</h4>
 
                         <label class="mr-sm-2 sr-only" for="question2">Question 2</label>
                         <select class="custom-select mr-sm-2 questions" id="question2">
@@ -86,11 +89,12 @@
                 </div>
                 <hr>
 
-                <div class="row col-md-10">
+                <div class="row col-md-12">
                     <!-- Question 3 -->
-                    <div class="col-auto my-1">
-                        <h4><strong>Question 3</strong></h4>
-                        <h6>You consider yourself different.</h6>
+                    <div class="col-md-6 my-1">
+                        <h3><strong>Question 3</strong></h3>
+                        <h4>Being different is what make me who I am.</h4>
+
 
                         <label class="mr-sm-2 sr-only" for="question3">Question 3</label>
                         <select class="custom-select mr-sm-2 questions" id="question3">
@@ -103,11 +107,12 @@
                         </select>
 
                     </div>
-                        
+
                     <!-- Question 4 -->
-                    <div class="col-auto my-1">
-                        <h4><strong>Question 4</strong></h4>
-                        <h6>You like to stay up all night.</h6>
+                    <div class="col-md-6 my-1">
+                        <h3><strong>Question 4</strong></h3>
+                        <h4>Your a night owl, up all night.</h4>
+
 
                         <label class="mr-sm-2 sr-only" for="question4">Question 4</label>
                         <select class="custom-select mr-sm-2 questions" id="question4">
@@ -122,11 +127,11 @@
                 </div>
                 <hr>
 
-                <div class="row col-md-10">
+                <div class="row col-md-12">
                     <!-- Question 5 -->
-                    <div class="col-auto my-1">
-                        <h4><strong>Question 5</strong></h4>
-                        <h6>You like to rock out.      </h6>
+                    <div class="col-md-6 my-1">
+                        <h3><strong>Question 5</strong></h3>
+                        <h4>I love rocking out to music.</h4>
 
                         <label class="mr-sm-2 sr-only" for="question5">Question 5</label>
                         <select class="custom-select mr-sm-2 questions" id="question5">
@@ -140,9 +145,9 @@
                     </div>
 
                     <!-- Question 6 -->
-                    <div class="col-auto my-1">
-                        <h4><strong>Question 6</strong></h4>
-                        <h6>You like being in groups of people.</h6>
+                    <div class="col-md-6 my-1">
+                        <h3><strong>Question 6</strong></h3>
+                        <h4>You have more fun in large groups.</h4>
 
                         <label class="mr-sm-2 sr-only" for="question6">Question 6</label>
                         <select class="custom-select mr-sm-2 questions" id="question6">
@@ -157,11 +162,11 @@
                 </div>
                 <hr>
 
-                <div class="row col-md-10">
+                <div class="row col-md-12">
                     <!-- Question 7 -->
-                    <div class="col-auto my-1">
-                        <h4><strong>Question 7</strong></h4>
-                        <h6>Your consider yourself a champion.</h6>
+                    <div class="col-md-6 my-1">
+                        <h3><strong>Question 7</strong></h3>
+                        <h4>You love sports anthems.</h4>
 
                         <label class="mr-sm-2 sr-only" for="question7">Question 7</label>
                         <select class="custom-select mr-sm-2 questions" id="question7">
@@ -175,9 +180,9 @@
                     </div>
 
                     <!-- Question 8 -->
-                    <div class="col-auto my-1">
-                        <h4><strong>Question 8</strong></h4>
-                        <h6>You prefer bass over treble.</h6>
+                    <div class="col-md-6 my-1">
+                        <h3><strong>Question 8</strong></h3>
+                        <h4>You like feeling the "boom" in the bass.</h4>
 
                         <label class="mr-sm-2 sr-only" for="question8">Question 8</label>
                         <select class="custom-select mr-sm-2 questions" id="question8">
@@ -190,13 +195,13 @@
                         </select>
                     </div>
                 </div>
-                <hr>    
+                <hr>
 
-                <div class="row col-md-10">
+                <div class="row col-md-12">
                     <!-- Question 9 -->
-                    <div class="col-auto my-1">
-                        <h4><strong>Question 9</strong></h4>
-                        <h6>You prefer live music.     </h6>
+                    <div class="col-md-6 my-1">
+                        <h3><strong>Question 9</strong></h3>
+                        <h4>Concerts over clubs, I love live music.</h4>
 
                         <label class="mr-sm-2 sr-only" for="question9">Question 9</label>
                         <select class="custom-select mr-sm-2 questions" id="question9">
@@ -210,9 +215,9 @@
                     </div>
 
                     <!-- Question 10 -->
-                    <div class="col-auto my-1">
-                        <h4><strong>Question 10</strong></h4>
-                        <h6>You like listening to loud music.</h6>
+                    <div class="col-md-6 my-1">
+                        <h3><strong>Question 10</strong></h3>
+                        <h4>I like my music loud, the louder the better.</h4>
 
                         <label class="mr-sm-2 sr-only" for="question10">Question 10</label>
                         <select class="custom-select mr-sm-2 questions" id="question10">
@@ -224,16 +229,20 @@
                             <option value="5">5</option>
                         </select>
                     </div>
+                    <br>
+                    <br>
+                    <i class="fas fa-headphones"></i>
                 </div>
-                <hr>
+
 
                 <!-- Submit Button -->
-                <div class="row col-md-10">
+                <div class="row col-md-12">
                     <div class="col-auto my-1">
                         <button type="submit" class="btn btn-primary submit">Submit</button>
                     </div>
                 </div>
             </div>
+
         </form>
 
         <!-- Modal -->
@@ -264,21 +273,21 @@
                 <p><a href="/api/friends">API Friends List</a> | <a href="#">GitHub Repo</a></p>
             </div>
         </footer>
-        
+
         <!-- scripts -->
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
             crossorigin="anonymous">
 
         <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-            crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+            integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
-        
-        
+
+
         <script type="text/javascript">
             // Capture the form inputs
             $(".submit").on("click", function (event) {
@@ -294,15 +303,13 @@
                     });
 
                     // Check that all questions have a value
-                    $("questions").each(function () {
-                        if ($(this).val() === "") {
+                    $(".questions").each(function () {
+                        if ($(this).val() === null) {
                             isValid = false;
                         }
                     });
                     return isValid;
                 }
-                
-                validateForm();
 
                 // If all required fields are filled...
                 if (validateForm()) {
@@ -329,7 +336,7 @@
                         console.log(data);
                         if (data) {
                             alert("Yay! Your data was saved.");
-                               
+
                             // Result from the AJAX post so that the best match's name and photo are displayed.
                             $("#friend-name").text(data.name);
                             $("#friend-pix").attr("src", data.photo);
@@ -337,7 +344,7 @@
                             // Show the modal with the best match
                             $("#results-modal").modal("toggle");
                         }
-                        
+
                         else {
                             alert("Please fill out all fields before submitting!");
                         }
@@ -346,9 +353,9 @@
                         $("#inputName").val("");
                         $("#photoLink").val("");
 
-                    });     
+                    });
                 }
-            });    
+            });
 
         </script>
 
