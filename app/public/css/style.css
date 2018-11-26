@@ -8,8 +8,9 @@ body {
     filter: alpha(opacity=30);
 }
 
-#surveyForm {
+#surveyForm, .surveyQuestions {
     color: antiquewhite;
+    margin: 15px;
 }
 
 .questions {
@@ -20,4 +21,7 @@ body {
 .footer {
     margin-top: 25px;
     padding-top: 20px;
+}
+button {
+    margin: 10px;
 }
