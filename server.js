@@ -14,9 +14,8 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// //allow use of public folder
-// app.use(express.static('public'))
-
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static("public"));
 // ROUTER
 
 require("./app/routing/apiRoutes")(app);
