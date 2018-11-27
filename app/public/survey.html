@@ -44,7 +44,7 @@
             <br>
 
             <!-- Form for survey -->
-            <div class="form-row" id="surveyquestions" required="" minlength="1">
+            <div class="form-row" id="surveyQuestions">
                 <div class="row col-md-12">
                     <h4><strong>Fill out short survey to find your best match in music.</strong> </h4>
                 </div>
@@ -57,7 +57,7 @@
                         <h3><strong>Question 1</strong></h3>
                         <h4>Your down time consist of relaxing, with a glass of wine.</h4>
 
-                        <select data-placeholder="" class="custom-select mr-sm-2 questions" required="" minlength="1" id="question1">
+                        <select class="custom-select mr-sm-2 questions" required="" minlength="1" id="question1">
                             <option value="">Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -72,7 +72,7 @@
                         <h3><strong>Question 2</strong></h3>
                         <h4>Dancing is not just cardio, it's a serious art.</h4>
 
-                        <select data-placeholder="" class="custom-select mr-sm-2 questions" required="" minlength="1" id="question2">
+                        <select class="custom-select mr-sm-2 questions" required="" minlength="1" id="question2">
                             <option value="">Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -89,7 +89,7 @@
                         <h3><strong>Question 3</strong></h3>
                         <h4>Being different is what make me who I am.</h4>
 
-                        <select data-placeholder="" class="custom-select mr-sm-2 questions" required="" minlength="1" id="question3">
+                        <select class="custom-select mr-sm-2 questions" required="" minlength="1" id="question3">
                             <option value="">Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -106,7 +106,7 @@
                         <h4>Your a night owl, up all night.</h4>
 
 
-                        <select data-placeholder="" class="custom-select mr-sm-2 questions" required="" minlength="1" id="question4">
+                        <select class="custom-select mr-sm-2 questions" required="" minlength="1" id="question4">
                             <option value="">Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -123,7 +123,7 @@
                         <h3><strong>Question 5</strong></h3>
                         <h4>I love rocking out to music.</h4>
 
-                        <select data-placeholder="" class="custom-select mr-sm-2 questions" required="" minlength="1" id="question5">
+                        <select class="custom-select mr-sm-2 questions" required="" minlength="1" id="question5">
                             <option value="">Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -138,7 +138,7 @@
                         <h3><strong>Question 6</strong></h3>
                         <h4>You have more fun in large groups.</h4>
 
-                        <select data-placeholder="" class="custom-select mr-sm-2 questions" required="" minlength="1" id="question6">
+                        <select class="custom-select mr-sm-2 questions" required="" minlength="1" id="question6">
                             <option value="">Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -155,7 +155,7 @@
                         <h3><strong>Question 7</strong></h3>
                         <h4>You love sports anthems.</h4>
 
-                        <select data-placeholder="" class="custom-select mr-sm-2 questions" required="" minlength="1" id="question7">
+                        <select   class="custom-select mr-sm-2 questions" required="" minlength="1" id="question7">
                             <option value="">Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -170,7 +170,7 @@
                         <h3><strong>Question 8</strong></h3>
                         <h4>You like feeling the "boom" in the bass.</h4>
 
-                        <select data-placeholder="" class="custom-select mr-sm-2 questions" required="" minlength="1" id="question8">
+                        <select class="custom-select mr-sm-2 questions" required="" minlength="1" id="question8">
                             <option value="">Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -187,7 +187,7 @@
                         <h3><strong>Question 9</strong></h3>
                         <h4>Concerts over clubs, I love live music.</h4>
 
-                        <select data-placeholder="" class="custom-select mr-sm-2 questions" required="" minlength="1" id="question9">
+                        <select class="custom-select mr-sm-2 questions" required="" minlength="1" id="question9">
                             <option value="" >Choose ...</option placeholder="Chose an option ...">
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -202,7 +202,7 @@
                         <h3><strong>Question 10</strong></h3>
                         <h4>I like my music loud, the louder the better.</h4>
 
-                        <select data-placeholder="" class="custom-select mr-sm-2 questions" required="" minlength="1" id="question10">
+                        <select class="custom-select mr-sm-2 questions" required="" minlength="1" id="question10">
                             <option value="">Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -220,7 +220,7 @@
                 <!-- Submit Button -->
                 <div class="row col-md-12">
                     <div class="col-auto my-1">
-                        <button type="submit" class="btn btn-primary submit" id="submit" >Submit</button>
+                        <button type="submit" class="btn btn-primary submit" id="submitBtn" >Submit</button>
                     </div>
                 </div>
             </div>
@@ -272,7 +272,7 @@
 
         <script type="text/javascript">
             // Capture the form inputs
-            $("submit").on("click", function (event) {
+            $(".submit").on("click", function (event) {
                 event.preventDefault();
 
                 // Form validation
@@ -285,7 +285,7 @@
                     });
 
                     // Check that all questions have a value
-                    $(".cutom-select").each(function () {
+                    $(".questions").each(function () {
                         if ($(this).val() === "") {
                             isValid = false;
                         }
