@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css"  href="/style.css" >
+    <link rel="stylesheet" type="text/css"  href="./style.css" >
 
     <title>Friend Finder Survey</title>
 </head>
@@ -57,7 +57,7 @@
                         <h3><strong>Question 1</strong></h3>
                         <h4>Your down time consist of relaxing, with a glass of wine.</h4>
 
-                        <select class="custom-select mr-sm-2 questions" required="" minlength="1" id="question1">
+                        <select class="custom-select mr-sm-2 questions form-control"required="" minlength="1" id="question1">
                             <option value="">Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -72,7 +72,7 @@
                         <h3><strong>Question 2</strong></h3>
                         <h4>Dancing is not just cardio, it's a serious art.</h4>
 
-                        <select class="custom-select mr-sm-2 questions" required="" minlength="1" id="question2">
+                        <select class="custom-select mr-sm-2 questions form-control"required="" minlength="1" id="question2">
                             <option value="">Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -89,7 +89,7 @@
                         <h3><strong>Question 3</strong></h3>
                         <h4>Being different is what make me who I am.</h4>
 
-                        <select class="custom-select mr-sm-2 questions" required="" minlength="1" id="question3">
+                        <select class="custom-select mr-sm-2 questions form-control"required="" minlength="1" id="question3">
                             <option value="">Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -106,7 +106,7 @@
                         <h4>Your a night owl, up all night.</h4>
 
 
-                        <select class="custom-select mr-sm-2 questions" required="" minlength="1" id="question4">
+                        <select class="custom-select mr-sm-2 questions form-control"required="" minlength="1" id="question4">
                             <option value="">Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -123,7 +123,7 @@
                         <h3><strong>Question 5</strong></h3>
                         <h4>I love rocking out to music.</h4>
 
-                        <select class="custom-select mr-sm-2 questions" required="" minlength="1" id="question5">
+                        <select class="custom-select mr-sm-2 questions form-control"required="" minlength="1" id="question5">
                             <option value="">Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -138,7 +138,7 @@
                         <h3><strong>Question 6</strong></h3>
                         <h4>You have more fun in large groups.</h4>
 
-                        <select class="custom-select mr-sm-2 questions" required="" minlength="1" id="question6">
+                        <select class="custom-select mr-sm-2 questions form-control"required="" minlength="1" id="question6">
                             <option value="">Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -155,7 +155,7 @@
                         <h3><strong>Question 7</strong></h3>
                         <h4>You love sports anthems.</h4>
 
-                        <select   class="custom-select mr-sm-2 questions" required="" minlength="1" id="question7">
+                        <select   class="custom-select mr-sm-2 questions form-control"required="" minlength="1" id="question7">
                             <option value="">Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -170,7 +170,7 @@
                         <h3><strong>Question 8</strong></h3>
                         <h4>You like feeling the "boom" in the bass.</h4>
 
-                        <select class="custom-select mr-sm-2 questions" required="" minlength="1" id="question8">
+                        <select class="custom-select mr-sm-2 questions form-control"required="" minlength="1" id="question8">
                             <option value="">Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -187,7 +187,7 @@
                         <h3><strong>Question 9</strong></h3>
                         <h4>Concerts over clubs, I love live music.</h4>
 
-                        <select class="custom-select mr-sm-2 questions" required="" minlength="1" id="question9">
+                        <select class="custom-select mr-sm-2 questions form-control"required="" minlength="1" id="question9">
                             <option value="" >Choose ...</option placeholder="Chose an option ...">
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -202,7 +202,7 @@
                         <h3><strong>Question 10</strong></h3>
                         <h4>I like my music loud, the louder the better.</h4>
 
-                        <select class="custom-select mr-sm-2 questions" required="" minlength="1" id="question10">
+                        <select class="custom-select mr-sm-2 questions form-control"required="" minlength="1" id="question10">
                             <option value="">Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -275,68 +275,48 @@
             $(".submit").on("click", function (event) {
                 event.preventDefault();
 
-                // Form validation
-                function validateForm() {
-                    var isValid = true;
-                    $(".form-control").each(function () {
-                        if ($(this).val() === "") {
-                            isValid = false;
-                        }
-                    });
+                // Create an object for the user"s data
+                var userInput = {
+                    name: $("#inputName").val().trim(),
+                    photo: $("#photoLink").val(),
+                    scores: [
+                        $("#question1").val(),
+                        $("#question2").val(),
+                        $("#question3").val(),
+                        $("#question4").val(),
+                        $("#question5").val(),
+                        $("#question6").val(),
+                        $("#question7").val(),
+                        $("#question8").val(),
+                        $("#question9").val(),
+                        $("#question10").val()
+                    ]
+                };
 
-                    // Check that all questions have a value
-                    $(".questions").each(function () {
-                        if ($(this).val() === "") {
-                            isValid = false;
-                        }
-                    });
-                    return isValid;
-                }
+                // AJAX post the data to the friends API.
+                $.post("/api/friends", userInput, function (data) {
+                    console.log(data);
+                    if (data) {
+                        alert("Yay! Your data was saved.");
 
-                // If all required fields are filled...
-                if (validateForm()) {
-                    // Create an object for the user"s data
-                    var userInput = {
-                        name: $("#inputName").val().trim(),
-                        photo: $("#photoLink").val(),
-                        scores: [
-                            $("#question1").val(),
-                            $("#question2").val(),
-                            $("#question3").val(),
-                            $("#question4").val(),
-                            $("#question5").val(),
-                            $("#question6").val(),
-                            $("#question7").val(),
-                            $("#question8").val(),
-                            $("#question9").val(),
-                            $("#question10").val()
-                        ]
-                    };
+                        // Result from the AJAX post so that the best match's name and photo are displayed.
+                        $("#friend-name").text(data.name);
+                        $("#friend-pix").attr("src", data.photo);
 
-                    // AJAX post the data to the friends API.
-                    $.post("/api/friends", userInput, function (data) {
-                        console.log(data);
-                        if (data) {
-                            alert("Yay! Your data was saved.");
+                        // Show the modal with the best match
+                        $("#results-modal").modal("toggle");
+                    }
 
-                            // Result from the AJAX post so that the best match's name and photo are displayed.
-                            $("#friend-name").text(data.name);
-                            $("#friend-pix").attr("src", data.photo);
+                    else {
+                        alert("Please fill out all fields before submitting!");
+                    }
+                    // Clear the form when submitting
+                    $(".questions").val("");
+                    $("#inputName").val("");
+                    $("#photoLink").val("");
 
-                            // Show the modal with the best match
-                            $("#results-modal").modal("toggle");
-                        }
-
-                        else {
-                            alert("Please fill out all fields before submitting!");
-                        }
-                        // Clear the form when submitting
-                        $(".questions").val("");
-                        $("#inputName").val("");
-                        $("#photoLink").val("");
-
-                    });
-                }
+                });
+                
             });
 
         </script>

@@ -1,16 +1,26 @@
 {
-  "name": "friendfinder",
+  "name": "friend-finder",
   "version": "1.0.0",
-  "description": "Find matching music",
+  "description": "Music friend match",
   "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "save": "^2.3.3"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jamie705/friend-finder.git"
+  },
   "author": "Jamie Rodriguez",
   "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4"
-  }
+  "bugs": {
+    "url": "https://github.com/Jamie705/friend-finder/issues"
+  },
+  "homepage": "https://github.com/Jamie705/friend-finder#readme"
 }
